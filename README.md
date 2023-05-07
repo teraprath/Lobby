@@ -52,7 +52,23 @@ dependencies {
 An example code for a custom module.
 
 ```java
+public class TestModule extends Module {
+    
+    @Override
+    public void onEnable() {
 
+        // Your code
+        
+        addListener(new TestListener());
+        
+    }
+
+    @Override
+    public void onDisable() {
+        // Your code
+    }
+
+}
 
 ```
 Visit [wiki](https://github.com/teraprath/Lobby/wiki/) page to see usage guide.
