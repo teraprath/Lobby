@@ -11,7 +11,12 @@
 ## Features
 
 - Easy to use and lightweight
+- World & Player Protection
+- Modular-System - Create your own Modules!
 - Compatible with [PointsAPI](https://github.com/teraprath/PointsAPI)
+
+![image](https://i.ibb.co/mckgGBV/Screenshot-2023-05-08-221512.png)
+Example Module: https://github.com/teraprath/ExampleModule/
 
 ## Implementation
 
