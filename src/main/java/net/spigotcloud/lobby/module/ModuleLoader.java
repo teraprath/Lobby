@@ -73,10 +73,10 @@ public class ModuleLoader {
 
                 if (object instanceof Module) {
                     Module module = (Module) object;
+                    module.onEnable();
                     module.getListeners().forEach(listener -> {
                         Lobby.getInstance().getServer().getPluginManager().registerEvents(listener, Lobby.getInstance());
                     });
-                    module.onEnable();
                     modules.add(module);
                     Lobby.getInstance().getLogger().log(Level.INFO, "Module " + module.getName() + " enabled!");
                 }
@@ -88,8 +88,8 @@ public class ModuleLoader {
 
     public void disable() {
         for (Module module : modules) {
-            module.getListeners().forEach(HandlerList::unregisterAll);
             module.onDisable();
+            module.getListeners().forEach(HandlerList::unregisterAll);
             Lobby.getInstance().getLogger().log(Level.INFO, "Module " + module.getName() + " disabled!");
         }
     }
