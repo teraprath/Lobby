@@ -51,24 +51,45 @@ dependencies {
 ## Create Module
 An example code for a custom module.
 
+
 ```java
 public class TestModule extends Module {
+
+    public Module() {
+        super(new ModuleItem());
+    }
     
     @Override
     public void onEnable() {
 
-        // Your code
+        // Startup logic
         
-        addListener(new TestListener());
+        registerListener(new TestListener());
+        registerSubCommand(new TestSubCommand());
         
     }
 
     @Override
     public void onDisable() {
-        // Your code
+        // Shutdown logic
+    }
+    
+    @Override
+    public void onItem(PlayerInteractEvent e) {
+    
+        // Add your code
+       
     }
 
 }
 
 ```
-Visit [wiki](https://github.com/teraprath/Lobby/wiki/) page to see usage guide.
+Create a `module.yml` in your `resources` folder:
+```yaml
+name: TestModule
+version: 1.0
+main: org.yourpackage.TestModule
+author: YourName
+```
+
+Visit [wiki](https://github.com/teraprath/Lobby/wiki/) page to see usage guide.(soon)
