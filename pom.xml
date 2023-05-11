@@ -6,7 +6,7 @@
 
     <groupId>net.spigotcloud</groupId>
     <artifactId>lobby</artifactId>
-    <version>1.4.0-STABLE</version>
+    <version>1.4.2-STABLE</version>
     <packaging>jar</packaging>
 
     <name>Lobby</name>
