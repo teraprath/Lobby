@@ -12,7 +12,7 @@
 
 - Easy to use and lightweight
 - World & Player Protection
-- Modular-System (Custom Modules)
+- Modular-System (+ code your own modules)
 - Premade Modules (Navigator, Player-Hider, Cosmetics & more) [SOON]
 - Compatible with [PointsAPI](https://github.com/teraprath/PointsAPI)
 
