@@ -67,10 +67,10 @@ public class ExampleModule extends Module {
     public void onEnable() {
 
         // Register events
-        registerListener(new ExampleListener());
+        registerListener(listener);
 
         // Register sub-commands
-        registerSubCommand("example", new ExampleCommand());
+        registerSubCommand("example", subCommand);
 
     }
 
