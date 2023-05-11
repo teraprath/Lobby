@@ -17,8 +17,6 @@
 - Premade Modules (Navigator, Player-Hider, Cosmetics & more) [SOON]
 - Compatible with [PointsAPI](https://github.com/teraprath/PointsAPI)
 
-Example Module: https://github.com/teraprath/ExampleModule/
-
 ## Implementation
 
 You can see the latest version [here](https://github.com/teraprath/Lobby/releases/latest).
@@ -59,32 +57,31 @@ An example code for a custom module.
 
 
 ```java
-public class TestModule extends Module {
+public class ExampleModule extends Module {
 
-    public Module() {
-        super(new ModuleItem());
+    public ExampleModule() {
+        super(new ModuleItem(itemstack, defaultSlot));
     }
-    
+
     @Override
     public void onEnable() {
 
-        // Startup logic
-        
-        registerListener(new TestListener());
-        registerSubCommand(new TestSubCommand());
-        
+        // Register events
+        registerListener(new ExampleListener());
+
+        // Register sub-commands
+        registerSubCommand("example", new ExampleCommand());
+
     }
 
     @Override
     public void onDisable() {
         // Shutdown logic
     }
-    
+
     @Override
-    public void onItem(PlayerInteractEvent e) {
-    
-        // Add your code
-       
+    public void onItemClick(PlayerInteractEvent e) {
+        // Module-Item interact logic
     }
 
 }
@@ -94,8 +91,9 @@ Create a `module.yml` in your `resources` folder:
 ```yaml
 name: TestModule
 version: 1.0
-main: org.yourpackage.TestModule
+main: org.example.ExampleModule
 author: YourName
 ```
+Full Example Module: https://github.com/teraprath/ExampleModule/
 
 Visit [wiki](https://github.com/teraprath/Lobby/wiki/) page to see usage guide.(soon)
