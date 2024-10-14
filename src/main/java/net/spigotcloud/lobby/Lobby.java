@@ -68,7 +68,7 @@ public final class Lobby extends JavaPlugin {
     private void registerEvents() {
         final PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new ItemListener(), this);
-        pm.registerEvents(new JoinQuitListener(), this);
+        pm.registerEvents(new JoinQuitListener(this.locationManager), this);
         pm.registerEvents(new ProtectListener(), this);
     }
 

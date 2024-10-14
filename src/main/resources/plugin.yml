@@ -3,7 +3,7 @@ version: '${project.version}'
 main: net.spigotcloud.lobby.Lobby
 api-version: 1.19
 softdepend: [ PointsAPI ]
-authors: [ TerryGHG ]
+authors: [ MrMending ]
 description: Modular Lobby Plugin for Spigot 1.19+
 website: https://github.com/teraprath
 commands:
